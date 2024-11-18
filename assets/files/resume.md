@@ -1,9 +1,3 @@
-# Manas Joshi
-
-Edmonton, Canada| \+1-(825) 966-0691 | [manas2005mj@gmail.com](mailto:manas2005mj@gmail.com)
-
-[Linkedin](https://www.linkedin.com/in/manas-joshi-employee-of-the-year/) | [Youtube](https://www.youtube.com/@GodOfGodsOfTheKnownReality) | [Github](https://github.com/BetterThanYou73)
-
 ## **TECHNICAL SKILLS**
 
 **Computer Languages:** Python, Julia, RISC-V Assembly,  C, C++, JavaScript, Bash, HTML/CSS
