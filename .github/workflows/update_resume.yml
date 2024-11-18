@@ -34,7 +34,7 @@ jobs:
           # Construct the JSON payload using jq to ensure proper formatting and escaping
           jq -n \
             --arg model "gpt-3.5-turbo" \
-            --arg system "You are a professional career advisor. Enhance the following resume content to be more detailed and professionally articulated without adding new information or details." \
+            --arg system "You are a professional career advisor. Your task is to enhance the following resume content by removing any redundant personal information, replacing it with a concise summary about the individual, and improving the projects section by effectively incorporating the programming languages mentioned next to each project." \
             --arg user "$RESUME_CONTENT" \
             '{
               model: $model,
@@ -42,8 +42,8 @@ jobs:
                 { role: "system", content: $system },
                 { role: "user", content: $user }
               ],
-              max_tokens: 750,
-              temperature: 0.5
+              max_tokens: 1000,
+              temperature: 0.7
             }' > payload.json
           
           # Output the constructed payload for debugging purposes
