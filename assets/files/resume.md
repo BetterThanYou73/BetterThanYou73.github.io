@@ -22,7 +22,7 @@ A machine learning model using probabilistic distribution in TensorFlow to predi
 
 A simple GUI that fetches models from my database and utilizes model’s character prediction to solve simple math equations.
 
-#### [**natHACKS 2023 \- Video Game**](https://github.com/GOATMaxwellN/Nightmares) — ***Unity, C\#, C++*, Arduino**
+#### [**natHACKS 2023 \- Video Game**](https://github.com/GOATMaxwellN/Nightmares) — ***Unity, C\#, C++***
 
 Developed an innovative video game that parametrizes the player's experience based on their ECG data to create personalized gameplay dynamics.
 
