@@ -32,7 +32,7 @@ April 2021 \- March 2023
 
 Collaborated in a team of five at natHACKS 2023, contributing to the development of the video game.
 
-Head of Arduino Development for project “[NightMare](https://github.com/GOATMaxwellN/Nightmares)”
+Incharge of Arduino Development for project “[NightMare](https://github.com/GOATMaxwellN/Nightmares)”
 
 Among the founders and organizers of the Techfest “Crypts”.
 
