@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+  }
+  
+  .contact-form-container {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form-container h2 {
+    text-align: center;
+    margin: 0.1em 0 0.1em;
+  }
+  
+  .contact-form-container p {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  .btn-submit {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 24px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-submit:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Hidden Class */
+  .hidden {
+    display: none;
+  }
+  
+  /* Message Cards */
+  .message-card {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .message-card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .message-card p {
+    margin-bottom: 20px;
+  }
+  
+  /* Blur Effect */
+  .blurred {
+    filter: blur(3px);
+    opacity: 0.6;
+    pointer-events: none;
+    user-select: none;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border-left-color: #fff;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .spinner.hidden {
+    display: none;
+  }
+  
+  .author__avatar{
+    max-width: 150px;
+  }

@@ -1,0 +1,141 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+# Site settings
+# Social links (can be customized further in layout files)
+social:
+  github: "https://github.com/BetterThanYou73"
+  linkedin: "https://www.linkedin.com/in/manas-joshi-employee-of-the-year/"
+  youtube: "https://www.youtube.com/@GodOfGodsOfTheKnownReality"
+
+author:
+  name     : "Manas Joshi"
+  avatar   : "/assets/images/profile.jpg"
+  bio      : "A second-year BSc Computer Science (Hons) student with a strong passion for AI and a deep interest in exploring new experiences. Aspiring to build a career in AI, continuously seeking opportunities to innovate and grow."
+  location : "Edmonton, Canada"
+  links:
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/manas-joshi-employee-of-the-year/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/BetterThanYou73"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/manas.joshi._"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "single"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "splash"
+      author_profile: true
+
+splash:
+  title: "Welcome to My Portfolio"
+  tagline: "Discover my projects, experiences, and passions."
+  background: "assets/images/profile.jpg" # Replace with your hero image
+  actions:
+    - label: "View My Projects"
+      url: "/projects/"
+    - label: "Download Resume"
+      url: "/assets/files/resume.pdf"
+
+  values:
+      layout: "splash"
+      author_profile: true
+
+title: "Manas Joshi"
+email: manas2005mj@gmail.com
+description: >
+  Experienced computing science student with a strong foundation in software development, machine learning, and collaborative projects.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://BetterThanYou73.github.io" # the base hostname & protocol for your site
+
+twitter_username: your_twitter_handle # Replace with your Twitter handle
+github_username: BetterThanYou73
+linkedin_username: manas-joshi-employee-of-the-year
+youtube_username: GodOfGodsOfTheKnownReality
+
+# Theme settings
+theme: "minimal-mistakes-jekyll"
+minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-paginate
+
+# Exclude certain files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Include directories
+include:
+  - _data
+  - assets
+
+# Optional: Pagination settings
+paginate: 5
+paginate_path: "/page/:num/"
+
+header_pages:
+  - index.md
+  - projects.md
+  - contact.md
+
+head_scripts:
+  - assets/js/main.js
+
+
+# Additional customization can be added here
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
