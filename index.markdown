@@ -15,7 +15,11 @@ header:
 
 {% include author-profile.html %}
 
+{% capture expanded_resume %}
+{% include_relative assets/files/expanded_resume.md %}
+{% endcapture %}
 
+{{ expanded_resume | markdownify }}
 
 <div class="contact-form-container">
     <h2>Contact Me</h2>

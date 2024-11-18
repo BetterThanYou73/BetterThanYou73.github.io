@@ -1,0 +1,86 @@
+name: Update Resume and Deploy Site
+
+concurrency:
+  group: "update-resume"
+  cancel-in-progress: true
+
+on:
+  push:
+    paths:
+      - 'assets/files/resume.md'
+
+jobs:
+  process_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # Step 2: Set up Ruby (for Jekyll)
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1' # Specify your Ruby version
+          bundler-cache: true
+
+      # Step 3: Install Dependencies
+      - name: Install Dependencies
+        run: |
+          bundle install
+
+      # Step 4: Process Resume with OpenAI GPT-3.5
+      - name: Process Resume with OpenAI GPT-3.5
+        id: nlp
+        run: |
+          echo "Processing resume with OpenAI..."
+          curl https://api.openai.com/v1/chat/completions \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{ secrets.OPENAI_API_KEY }}" \
+            -d '{
+              "model": "gpt-3.5-turbo",
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "You are a professional career advisor. Enhance the following resume content to be more detailed and professionally articulated without adding new information or details."
+                },
+                {
+                  "role": "user",
+                  "content": "'"$(cat assets/files/resume.md | sed 's/"/\\"/g')"'"
+                }
+              ],
+              "max_tokens": 750,
+              "temperature": 0.5
+            }' > response.json
+
+          # Extract the expanded content
+          EXPANDED_CONTENT=$(jq -r '.choices[0].message.content' response.json)
+
+          echo "Expanded content:"
+          echo "$EXPANDED_CONTENT"
+
+          # Save the expanded content to expanded_resume.md
+          echo "$EXPANDED_CONTENT" > assets/files/expanded_resume.md
+
+      # Step 5: Commit the Expanded Resume
+      - name: Commit Expanded Resume
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/files/expanded_resume.md
+          git commit -m "Update expanded resume via GitHub Actions" || echo "No changes to commit"
+
+      # Step 6: Build the Site with Jekyll
+      - name: Build Site with Jekyll
+        run: |
+          bundle exec jekyll build
+
+      # Step 7: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
