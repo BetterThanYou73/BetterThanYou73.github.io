@@ -27,31 +27,36 @@ jobs:
         id: nlp
         run: |
           echo "Processing resume with OpenAI..."
-          
-          # Read the contents of resume.md and escape double quotes
-          RESUME_CONTENT=$(cat assets/files/resume.md | sed 's/"/\\"/g')
-          
+
+          # Read the contents of resume.md
+          RESUME_CONTENT=$(cat assets/files/resume.md)
+
+          # Construct the JSON payload using jq to ensure proper formatting and escaping
+          jq -n \
+            --arg model "gpt-3.5-turbo" \
+            --arg system "You are a professional career advisor. Enhance the following resume content to be more detailed and professionally articulated without adding new information or details." \
+            --arg user "$RESUME_CONTENT" \
+            '{
+              model: $model,
+              messages: [
+                { role: "system", content: $system },
+                { role: "user", content: $user }
+              ],
+              max_tokens: 750,
+              temperature: 0.5
+            }' > payload.json
+
+          # Output the constructed payload for debugging purposes
+          echo "Constructed JSON payload:"
+          cat payload.json
+
           # Make the API request to OpenAI
           curl https://api.openai.com/v1/chat/completions \
             -H "Content-Type: application/json" \
             -H "Authorization: Bearer ${{ secrets.OPENAI_API_KEY }}" \
-            -d "{
-              \"model\": \"gpt-3.5-turbo\",
-              \"messages\": [
-                {
-                  \"role\": \"system\",
-                  \"content\": \"You are a professional career advisor. Enhance the following resume content to be more detailed and professionally articulated without adding new information or details.\"
-                },
-                {
-                  \"role\": \"user\",
-                  \"content\": \"${RESUME_CONTENT}\"
-                }
-              ],
-              \"max_tokens\": 750,
-              \"temperature\": 0.5
-            }" > response.json
+            -d @payload.json > response.json
 
-          # Output the raw response for debugging purposes
+          # Output the raw response for debugging
           echo "OpenAI API response:"
           cat response.json
 
