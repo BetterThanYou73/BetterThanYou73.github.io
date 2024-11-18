@@ -24,7 +24,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3' # Match your local Ruby version
+          ruby-version: '3.3' # Ensure this matches your local Ruby version
           bundler-cache: true
 
       # Step 3: Install Dependencies
@@ -32,7 +32,13 @@ jobs:
         run: |
           bundle install
 
-      # Step 4: Process Resume with OpenAI GPT-3.5
+      # Step 4: Install jq (for JSON processing)
+      - name: Install jq
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
+
+      # Step 5: Process Resume with OpenAI GPT-3.5
       - name: Process Resume with OpenAI GPT-3.5
         id: nlp
         run: |
@@ -56,6 +62,10 @@ jobs:
               "temperature": 0.5
             }' > response.json
 
+          # Output the response for debugging
+          echo "OpenAI API response:"
+          cat response.json
+
           # Extract the expanded content
           EXPANDED_CONTENT=$(jq -r '.choices[0].message.content' response.json)
 
@@ -65,20 +75,25 @@ jobs:
           # Save the expanded content to expanded_resume.md
           echo "$EXPANDED_CONTENT" > assets/files/expanded_resume.md
 
-      # Step 5: Commit the Expanded Resume
+          # Verify file creation
+          echo "Contents of expanded_resume.md:"
+          cat assets/files/expanded_resume.md
+
+      # Step 6: Commit the Expanded Resume
       - name: Commit Expanded Resume
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/files/expanded_resume.md
+          git status
           git commit -m "Update expanded resume via GitHub Actions" || echo "No changes to commit"
 
-      # Step 6: Build the Site with Jekyll
+      # Step 7: Build the Site with Jekyll
       - name: Build Site with Jekyll
         run: |
-          bundle exec jekyll build
+          bundle exec jekyll build --verbose
 
-      # Step 7: Deploy to GitHub Pages
+      # Step 8: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
