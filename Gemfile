@@ -10,9 +10,36 @@ gem "kramdown-parser-gfm"
 
 gem "jekyll-include-cache", group: :jekyll_plugins
 
+gem "jekyll-github-metadata"
+
+gem "jekyll-seo-tag"
+
+gem "jekyll-feed"
+
+gem "jekyll-sitemap"
+
+gem "jekyll-gist"
+
+gem "jekyll-paginate"
+
+gem "jekyll-coffeescript"
+
+gem "jekyll-commonmark-ghpages"
+
+gem "jekyll-relative-links"
+
+gem "jekyll-optional-front-matter"
+
+gem "jekyll-readme-index"
+
+gem "jekyll-default-layout"
+
+gem "jekyll-titles-from-headings"
+
+gem "jekyll-remote-theme"
+
 # Plugins
 group :jekyll_plugins do
-  gem "jekyll-feed"
   gem "jekyll-seo-tag"
 end
 
