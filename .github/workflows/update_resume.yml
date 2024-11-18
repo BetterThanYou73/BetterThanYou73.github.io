@@ -27,14 +27,25 @@ jobs:
         id: nlp
         run: |
           echo "Processing resume with OpenAI..."
-          
+
           # Read the contents of resume.md
           RESUME_CONTENT=$(cat assets/files/resume.md)
-          
+
           # Construct the JSON payload using jq to ensure proper formatting and escaping
           jq -n \
             --arg model "gpt-3.5-turbo" \
-            --arg system "You are a professional career advisor. Your task is to enhance the following resume content by removing any redundant personal information, replacing it with a concise summary about the individual, and improving the projects section by effectively incorporating the programming languages mentioned next to each project." \
+            --arg system "You are a professional career advisor. Please enhance the following resume content by performing the following actions:
+
+1. **Add a Concise Summary at the Top:**
+   - Create a brief summary that highlights the individual's professional background, key strengths, and career objectives.
+
+2. **Enhance Existing Sections Without Removing Them:**
+   - Improve the language and detail in the existing sections to make them more impactful and professional.
+
+3. **Improve the Projects Section:**
+   - For each project listed, effectively incorporate the programming languages mentioned next to the project to highlight technical skills.
+
+**Important:** Do not remove any existing sections or details unless explicitly specified. Ensure that all original information remains intact and is only enhanced for clarity and professionalism." \
             --arg user "$RESUME_CONTENT" \
             '{
               model: $model,
@@ -45,36 +56,36 @@ jobs:
               max_tokens: 1000,
               temperature: 0.7
             }' > payload.json
-          
+
           # Output the constructed payload for debugging purposes
           echo "Constructed JSON payload:"
           cat payload.json
-          
+
           # Make the API request to OpenAI
           curl https://api.openai.com/v1/chat/completions \
             -H "Content-Type: application/json" \
             -H "Authorization: Bearer ${{ secrets.OPENAI_API_KEY }}" \
             -d @payload.json > response.json
-          
+
           # Output the raw response for debugging
           echo "OpenAI API response:"
           cat response.json
-          
+
           # Extract the expanded content using jq
           EXPANDED_CONTENT=$(jq -r '.choices[0].message.content' response.json)
-          
+
           # Check if the expanded content was successfully extracted
           if [ -z "$EXPANDED_CONTENT" ] || [ "$EXPANDED_CONTENT" == "null" ]; then
             echo "Error: Failed to retrieve expanded content from OpenAI response."
             exit 1
           fi
-          
+
           echo "Expanded content:"
           echo "$EXPANDED_CONTENT"
-          
+
           # Save the expanded content to expanded_resume.md
           echo "$EXPANDED_CONTENT" > assets/files/expanded_resume.md
-          
+
           # Verify file creation
           echo "Contents of expanded_resume.md:"
           cat assets/files/expanded_resume.md
