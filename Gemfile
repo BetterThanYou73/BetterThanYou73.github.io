@@ -15,6 +15,12 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
 end
 
+# Additional gems to silence warnings about standard library gems
+gem "webrick"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+
 # Windows and JRuby dependencies
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"
