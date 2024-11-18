@@ -105,9 +105,6 @@ include:
   - _data
   - assets
 
-# Optional: Pagination settings
-paginate: 5
-paginate_path: "/page/:num/"
 
 header_pages:
   - index.md
