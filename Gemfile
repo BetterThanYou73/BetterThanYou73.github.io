@@ -1,4 +1,9 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+# Specify the Jekyll version
+gem "jekyll", "~> 3.9"
+
+
+gem 'wdm', '>= 0.1.0'
+
 gem "jekyll-include-cache", group: :jekyll_plugins
