@@ -73,8 +73,9 @@ email: manas2005mj@gmail.com
 description: >
   Experienced computing science student with a strong foundation in software development, machine learning, and collaborative projects.
 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: '' # the subpath of your site, e.g. /blog
 url: "https://BetterThanYou73.github.io" # the base hostname & protocol for your site
+
 
 twitter_username: your_twitter_handle # Replace with your Twitter handle
 github_username: BetterThanYou73
