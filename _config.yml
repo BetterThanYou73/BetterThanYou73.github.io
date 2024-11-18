@@ -69,6 +69,8 @@ splash:
       author_profile: true
 
 title: "Manas Joshi"
+
+masthead_title: "My Portfolio"
 email: manas2005mj@gmail.com
 description: >
   Experienced computing science student with a strong foundation in software development, machine learning, and collaborative projects.
@@ -104,7 +106,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-include-cache
 
-  
+
 # Exclude certain files from processing
 exclude:
   - Gemfile

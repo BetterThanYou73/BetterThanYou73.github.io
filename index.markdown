@@ -7,7 +7,7 @@ header:
   overlay_filter: 0.3
   actions:
     - label: "View Projects"
-      url: "/projects/"
+      url: "https://github.com/BetterThanYou73?tab=stars"
     - label: "Download Resume"
       url: "/assets/files/resume.pdf"
 ---
