@@ -1,15 +1,13 @@
 source "https://rubygems.org"
 
-# Specify the Jekyll version
-gem "jekyll"
+# Specify the Jekyll version compatible with GitHub Pages
+gem "github-pages", group: :jekyll_plugins
 
 # Minimal Mistakes theme
 gem "minimal-mistakes-jekyll"
 
-# Include cache for faster builds
-gem "jekyll-include-cache", group: :jekyll_plugins
+gem "kramdown-parser-gfm"
 
-gem "github-pages", group: :jekyll_plugins
 gem "jekyll-include-cache", group: :jekyll_plugins
 
 # Plugins
