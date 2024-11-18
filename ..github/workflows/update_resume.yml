@@ -24,7 +24,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2' # Specify your Ruby version
+          ruby-version: '3.3' # Match your local Ruby version
           bundler-cache: true
 
       # Step 3: Install Dependencies
