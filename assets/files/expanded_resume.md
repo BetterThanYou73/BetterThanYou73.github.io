@@ -1,19 +1,45 @@
-**Summary:** 
-Experienced and innovative Computing Science student with expertise in Python, Julia, RISC-V Assembly, C, C++, JavaScript, and various technologies. Proficient in TensorFlow, RL-Glue, and Django frameworks. Skilled in Git and MySQL. Adept at developing machine learning models, GUI applications, and video games by leveraging a diverse set of programming languages.
+## **Professional Summary**
 
----
+Highly motivated Computing Science student with a strong foundation in computer languages, machine learning frameworks, and related technologies. Proven expertise in Python, TensorFlow, and Matplotlib, with a keen interest in exploring the intersection of machine learning and visual recognition. With a successful track record of project execution and collaborative work, I am seeking opportunities to apply my skills in real-world situations and contribute towards cutting-edge technological solutions.
 
-## **PROJECTS**
+## **Technical Skills**
 
-#### [**Math-Vision-Model**](https://github.com/BetterThanYou73/tensorflow-math-vision) — *Python, TensorFlow, Matplotlib*
-- Implemented a machine learning model in TensorFlow using probabilistic distribution to predict characters in images. Utilized Python for scripting and Matplotlib for visualization.
+**Computer Languages:** Proficient in Python, Julia, RISC-V Assembly, C, C++, JavaScript, Bash, HTML/CSS
 
-#### [**Math-Vision-OCR**](https://github.com/BetterThanYou73/math-vision) — *Python, TensorFlow*
-- Developed a GUI application that retrieves models from a database and employs character prediction for solving math equations.
+**Frameworks:** Functional expertise in TensorFlow, RL-Glue, Django
 
-#### [**natHACKS 2023 - Video Game**](https://github.com/GOATMaxwellN/Nightmares) — *Unity, C#, C++, Arduino*
-- Spearheaded the development of a personalized video game that adjusts gameplay dynamics based on the player's ECG data. Leveraged Unity, C#, C++, and Arduino for implementation.
+**Technologies:** Skilled in using Git for version control and MySQL for database management
 
----
+## **Projects**
 
-This revised version emphasizes the individual's technical skills and project experiences more effectively, showcasing their proficiency in a variety of programming languages and technologies.
+#### [**Math-Vision-Model**](https://github.com/BetterThanYou73/tensorflow-math-vision) — ***Python, TensorFlow, Matplotlib***
+
+Designed and developed a machine learning model employing a probabilistic distribution approach in TensorFlow. The model effectively predicts characters in images, with meticulous analysis and visualization handled via Python and Matplotlib.
+
+#### [**Math-Vision-OCR**](https://github.com/BetterThanYou73/math-vision) **—** *Python, TensorFlow*
+
+Engineered a user-friendly GUI that seamlessly fetches models from a database, leveraging the model’s character prediction abilities to solve basic mathematical equations.
+
+#### [**natHACKS 2023 \- Video Game**](https://github.com/GOATMaxwellN/Nightmares) — ***Unity, C\#, C++, Arduino***
+
+Instrumental in developing a unique video game that customizes the player's experience based on their Electrocardiogram (ECG) data, thereby creating bespoke gameplay dynamics.
+
+## **Education**
+
+University Of Alberta **—** First-year Student **—**  BSc Hons Computing Science  
+Sept 2023 - April 2024
+
+OPG World School, New Delhi, India **—** Completed Grade 11 & 12   
+April 2021 - March 2023
+
+## **Collaborative Experience**
+
+Contributed significantly to a team of five at natHACKS 2023, aiding in the successful development of a personalized video game.
+
+Held a key role in Arduino Development for the project “[NightMare](https://github.com/GOATMaxwellN/Nightmares)”.
+
+Co-founded and organized the Techfest “Crypts”, demonstrating leadership skills and event management prowess.
+
+## **Interests**
+
+Passionate about maintaining physical fitness and optimizing machine learning models. Enjoys social interactions and spending time with friends.
