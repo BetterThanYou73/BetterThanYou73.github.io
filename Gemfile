@@ -1,12 +1,15 @@
 source "https://rubygems.org"
 
 # Specify the Jekyll version
-gem "jekyll", "~> 4.2.0"
+gem "jekyll"
 
 # Minimal Mistakes theme
 gem "minimal-mistakes-jekyll"
 
 # Include cache for faster builds
+gem "jekyll-include-cache", group: :jekyll_plugins
+
+gem "github-pages", group: :jekyll_plugins
 gem "jekyll-include-cache", group: :jekyll_plugins
 
 # Plugins

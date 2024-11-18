@@ -82,7 +82,7 @@ linkedin_username: manas-joshi-employee-of-the-year
 youtube_username: GodOfGodsOfTheKnownReality
 
 # Theme settings
-theme: "minimal-mistakes-jekyll"
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Plugins
