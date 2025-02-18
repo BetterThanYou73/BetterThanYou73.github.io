@@ -1,63 +1,62 @@
 # Manas Joshi
 
-Edmonton, Canada | +1-(825)-966-0691 | [manas2005mj@gmail.com](mailto:manas2005mj@gmail.com)
+Edmonton, Canada| +1-(825)-966-0691 | [manas2005mj@gmail.com](mailto:manas2005mj@gmail.com)
 
 [Linkedin](https://www.linkedin.com/in/manas-joshi-employee-of-the-year/) | [Youtube](https://www.youtube.com/@GodOfGodsOfTheKnownReality) | [Github](https://github.com/BetterThanYou73) | [Website](https://betterthanyou73.github.io/)
 
-## **Professional Summary**
-Highly motivated Computing Science student with a knack for problem-solving and a proven ability to learn new programming languages and technologies. Manas has a strong foundation in machine learning, web development, and computer organization. He seeks to leverage his skills in an innovative tech environment while continuing to grow and take on new challenges.
+## Professional Summary
+Highly skilled and dedicated Computing Science student with a strong capacity for collaborative work and a keen interest in developing innovative projects. I offer proficiency in a broad range of computer languages and technologies. My career objective is to leverage my technical skills and collaborative experiences to contribute to cutting-edge projects in the field of computing science.
 
-## **TECHNICAL SKILLS**
+## TECHNICAL SKILLS
+**Computer Languages:** Proficient in Python, Julia, RISC-V Assembly, C, C++, JavaScript, Bash, HTML/CSS.
 
-**Proficient Languages:** Python, Julia, RISC-V Assembly,  C, C++, JavaScript, Bash, HTML/CSS
+**Framework:** Demonstrated expertise in TensorFlow, RL-Glue, Scikit-learn, Django, Flask.
 
-**Frameworks & Libraries:** TensorFlow, RL-Glue, Scikit-learn, Django, Flask
+**Technologies:** Proficient in Git, MySQL, Leafletjs API, and OpenWeather API.
 
-**Other Technologies:** Git, MySQL, Leafletjs API, OpenWeather API
+## PROJECTS
+**[SkyNav](https://skynav.pythonanywhere.com/)** — Python, Scikit-learn, Flask, JavaScript, HTML, CSS
 
-## **PROJECTS**
+Developed a sophisticated real-time navigation system, SkyNav, aimed at guiding small aircraft, helicopters, and drones towards their destination in a secure and efficient manner.
 
-#### [**SkyNav**](https://skynav.pythonanywhere.com/) — ***Python, Scikit-learn, Flask, JavaScript, HTML, CSS***
+**[Math-Vision-Model](https://github.com/BetterThanYou73/tensorflow-math-vision)** — Python, TensorFlow, Matplotlib
 
-Developed SkyNav, a responsive, real-time navigation system specially designed to guide small aircraft, helicopters, and drones towards their destination in a safe and efficient manner.
+Constructed a machine learning model that leverages probabilistic distribution in TensorFlow to predict characters in images. Utilized Python and Matplotlib for comprehensive data visualization and analysis.
 
-#### [**Math-Vision-Model**](https://github.com/BetterThanYou73/tensorflow-math-vision) — ***Python, TensorFlow, Matplotlib***
+**[Math-Vision-OCR](https://github.com/BetterThanYou73/math-vision)** — Python, TensorFlow
 
-Built a machine learning model leveraging TensorFlow's probabilistic distribution capabilities to predict characters in images, used Python and Matplotlib for in-depth visualization and data analysis.
+Created a user-friendly GUI that pulls models from my database and employs the model’s character prediction to solve simple mathematical equations.
 
-#### [**Math-Vision-OCR**](https://github.com/BetterThanYou73/math-vision) — ***Python, TensorFlow***
+**[natHACKS 2023 - Video Game](https://github.com/GOATMaxwellN/Nightmares)** — Unity, C#, C++
 
-Created a user-friendly GUI that fetches models from a database and leverages the model’s character prediction functionality to solve simple math equations.
+Contributed to the development of a novel video game, which personalizes the player's experience based on their ECG data to create unique gameplay dynamics.
 
-#### [**natHACKS 2023 \- Video Game**](https://github.com/GOATMaxwellN/Nightmares) — ***Unity, C#, C++***
+## EDUCATION
+**University Of Alberta** — Second Year — BSc Hons Computing Science
 
-Conceptualized and developed an innovative video game that employs player's ECG data to generate personalized gameplay experiences.
-
-## **EDUCATION**
-
-University Of Alberta — Second year — BSc Hons Computing Science  
 Sept 2023 - April 2024
 
-Relevant Coursework:  
-CMPUT 272: Formal Systems and Logic  
-CMPUT 267: Basics of Machine Learning  
-CMPUT 204: Algorithms I  
-CMPUT 229: Computer Organization/Architecture I  
+Relevant Coursework:
+CMPUT 272: Formal Systems and Logic
+CMPUT 267: Basics of Machine Learning
+CMPUT 204: Algorithms I
+CMPUT 229: Computer Organization/Architecture I
 CMPUT 365: Reinforcement Learning
 
-OPG World School, New Delhi, India — Grade 11 & 12   
+**OPG World School, New Delhi, India** — Grade 11 & 12
+
 April 2021 - March 2023
 
-## **COLLABORATIVE EXPERIENCE**
+## COLLABORATIVE EXPERIENCE
+Participated in a team of four at HackED 2025, contributing to the development of SkyNav, a pioneering navigation technology for small aircrafts.
 
-Played a key role in a team of four at HackED 2025, where we developed SkyNav, a cutting-edge navigation technology for small aircrafts.
+Contributed to a supervised imitation learning of the Forest classifier model used for determining optimal routes and incorporating an interactive real-time route on the server side using Leaflet.
 
-Contributed significantly to supervised imitation learning of the Forest classifier model for optimal route detection; further integrated an interactive real-time route on the server-side using Leaflet.
+Engaged in a team of five at natHACKS 2023, contributing to the video game development.
 
-Participated in a team of five at natHACKS 2023, where we developed an interactive video game.
+Led Arduino Development for project "[NightMare](https://github.com/GOATMaxwellN/Nightmares)", which collects the user's heartbeat using a bioAMP pill via the device.
 
-Assumed responsibility for Arduino Development for the project "[NightMare](https://github.com/GOATMaxwellN/Nightmares)"; designed the system to collect heartbeat data from the user using a bioAMP pill via the device.
+## INTERESTS
+Keen interest in collaborative project development.
 
-## **INTERESTS**
-
-Passionate about building innovative projects with peers and maintains an active lifestyle by working out at the gym.
+Passionate about fitness and regular workouts at the gym.
